@@ -1,6 +1,7 @@
 import Factory.Car;
 import Factory.CarFactory;
 import builder.User;
+import facade.ComputerFacade;
 
 public class Application {
 
@@ -21,13 +22,17 @@ public class Application {
 
 
         System.out.println("Testing Factory Pattern...");
-        Car car = CarFactory.create("bmw");
+        Car car = CarFactory.create("classic");
         car.startEngine();
         car.turnRight();
         car.turnLeft();
         car.stop();
 
-
+        System.out.println("Facade Design Pattern Sample...");
+        ComputerFacade computerFacade = new ComputerFacade();
+        computerFacade.makePowerfulComputer();
+        //Or
+        computerFacade.makeEconomicComputer();
 
     }
 }

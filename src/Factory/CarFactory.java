@@ -2,14 +2,14 @@ package Factory;
 
 public class CarFactory {
 
-    public static Car create(String companyName) {
-        switch (companyName) {
-            case "bmw":
+    public static Car create(String type) {
+        switch (type) {
+            case "sport":
                 return new Bmw();
-            case "benz":
+            case "classic":
                 return new Benz();
             default:
-                throw new IllegalArgumentException("Company name isn't valid");
+                throw new IllegalArgumentException("Type isn't valid");
         }
     }
 }
